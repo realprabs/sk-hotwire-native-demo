@@ -4,4 +4,6 @@
 	let { children } = $props();
 </script>
 
-{@render children()}
+<div class="max-w-screen-md mx-auto prose prose-stone px-4 py-6">
+	{@render children()}
+</div>
