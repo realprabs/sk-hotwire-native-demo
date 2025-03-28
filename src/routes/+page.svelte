@@ -3,6 +3,10 @@
     import NavGroup from "$lib/components/nav_group.svelte";
 </script>
 
+<svelte:head>
+    <title>Welcome to SvelteKit</title>
+</svelte:head>
+
 <h1>Welcome to SvelteKit</h1>
 <p>This demo app will help you get acquainted with the framework.</p>
 <h3>Basic features</h3>

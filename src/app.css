@@ -1,3 +1,11 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+.native-app h1 {
+    display: none;
+}
+
+.btn {
+    @apply bg-blue-400 text-white rounded-md px-4 py-2 w-full;
+}
