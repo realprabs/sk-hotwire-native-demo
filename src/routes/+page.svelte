@@ -23,7 +23,7 @@
     <NavItem href="/numbers" icon="bi:phone" label="Intercept with a native view" />
     <NavItem href="https://svelte.dev/" icon="material-symbols:link" label="Follow an external link" />
     <NavItem href="/files" icon="material-symbols:folder-outline" label="See how files work" />
-    <NavItem href="/redirect" icon="material-symbols:arrow-forward" label="Follow a redirect" />
+    <NavItem href="/follow" icon="material-symbols:arrow-forward" label="Follow a redirect" />
     <NavItem href="/external-redirect" icon="material-symbols:open-in-new" label="Follow an external redirect" />
 </NavGroup>
 <h3>Bridge components</h3>
