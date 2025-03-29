@@ -14,11 +14,9 @@
     <NavItem href="/one" icon="material-symbols:directions-outline" label="Navigate to another page" />
     <NavItem href="/slow" icon="fluent:slow-mode-24-regular" label="Open a slow-loading page" />
     <NavItem href="/long" icon="hugeicons:scroll" label="Try scroll restoration" />
-    <NavItem href="/nonexistent" icon="tabler:error-404-off" label="Hit an HTTP 404 error" />
 </NavGroup>
 <h3>Advanced features</h3>
 <NavGroup>
-    <NavItem href="/protected" icon="material-symbols:lock-outline" label="Intercept unauthorized access" />
     <NavItem href="/new" icon="material-symbols:open-in-new" label="Load a page modally" />
     <NavItem href="/numbers" icon="bi:phone" label="Intercept with a native view" />
     <NavItem href="https://svelte.dev/" icon="material-symbols:link" label="Follow an external link" />

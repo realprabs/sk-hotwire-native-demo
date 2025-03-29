@@ -12,6 +12,6 @@ Go back and try Intercept with a native view to see how to load a native screen 
 <p>This link will be presented using the same <code>advance</code> visit presentation:</p>
 <Link href="/two">Advance to another webpage</Link>
 <p>This performs a <code>replace</code> visit instead:</p>
-<Link href="/two?action=replace">Replace with another webpage</Link>
+<Link href="/two?action=replace" data-sveltekit-replacestate>Replace with another webpage</Link>
 <p>This performs a <code>replace</code> visit to the current page, refreshing its content:</p>
 <Link href="/one">Refresh</Link>

@@ -8,6 +8,12 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+
+	import {Turbo} from './hooks.client'
+
+	interface Window {
+		Turbo: Turbo
+	}
 }
 
 export {};
