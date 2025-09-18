@@ -1,18 +1,13 @@
 <script lang="ts">
 	import { applyAction, enhance } from '$app/forms';
-
 	import { type SubmitFunction } from '@sveltejs/kit';
 
 	const submissionHandler: SubmitFunction = async ({ action }) => {
-		window.Turbo.adapter?.formSubmissionStarted({
-			location: action
-		});
+		window.HotwireNavigator.formSubmissionStarted(action);
 		return async ({ result }) => {
-			if (result.type === 'redirect' && window.Turbo.adapter) {
-				window.Turbo.adapter.formSubmissionFinished({
-					location: action
-				});
-				window.Turbo.adapter.visitProposedToLocation(
+			if (result.type === 'redirect' && window.HotwireNavigator.enabled) {
+				window.HotwireNavigator.formSubmissionFinished(action);
+				window.HotwireNavigator.visitProposedToLocation(
 					new URL(result.location, window.location.origin),
 					{
 						action: 'advance'

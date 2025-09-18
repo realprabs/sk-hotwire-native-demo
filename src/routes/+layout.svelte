@@ -2,7 +2,7 @@
 	import '../app.css';
 	import type { LayoutProps } from './$types';
 	import clsx from 'clsx';
-    import { ProgressBar } from "@prgm/sveltekit-progress-bar";
+	import { ProgressBar } from '@prgm/sveltekit-progress-bar';
 
 	let { children, data }: LayoutProps = $props();
 </script>

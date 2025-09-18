@@ -1,3 +1,26 @@
+<script lang="ts">
+	import { browser } from '$app/environment';
+
+	$effect(() => {
+		if (window.HotwireNavigator.enabled) {
+			window.HotwireNative.web.send({
+				component: 'form',
+				event: 'connect',
+				data: {
+					submitTitle: 'Submit'
+				},
+				callback: handleSubmit
+			});
+		}
+	});
+	function handleSubmit() {
+		alert('Form submitted!');
+	}
+	const formComponentSupported = browser
+		? window.HotwireNative.web.supportsComponent('form')
+		: false;
+</script>
+
 <svelte:head>
 	<title>Bridge Components</title>
 </svelte:head>
@@ -18,7 +41,7 @@
 	no matter where you're scrolled on the page.
 </p>
 
-<form class="space-y-4 not-prose">
+<form class="not-prose space-y-4" onsubmit={handleSubmit}>
 	<label for="firstName" class="block">
 		<span>What is your first name?</span>
 		<input
@@ -26,7 +49,7 @@
 			id="firstName"
 			name="firstName"
 			placeholder="Type your first name…"
-			class="form-input rounded-md border-stone-300 block w-full"
+			class="form-input block w-full rounded-md border-stone-300"
 		/>
 	</label>
 
@@ -37,9 +60,10 @@
 			id="lastName"
 			name="lastName"
 			placeholder="Type your last name…"
-			class="form-input rounded-md border-stone-300 block w-full"
+			class="form-input block w-full rounded-md border-stone-300"
 		/>
 	</label>
-
-	<button type="submit" class="btn">Submit Form</button>
+	{#if !formComponentSupported}
+		<button type="submit" class="btn">Submit Form</button>
+	{/if}
 </form>

@@ -9,10 +9,10 @@ declare global {
 		// interface Platform {}
 	}
 
-	import {Turbo} from './hooks.client'
+	import { Turbo } from './hooks.client';
 
 	interface Window {
-		Turbo: Turbo
+		Turbo: Turbo;
 	}
 }
 

@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>It worked!</title>
+	<title>It worked!</title>
 </svelte:head>
 
 <h1>It worked!</h1>

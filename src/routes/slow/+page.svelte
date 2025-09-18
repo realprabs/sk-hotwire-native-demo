@@ -1,5 +1,5 @@
 <svelte:head>
-    <title>Slow-loading Page</title>
+	<title>Slow-loading Page</title>
 </svelte:head>
 
 <h1>Slow-loading Page</h1>
